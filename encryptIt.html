@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Encrypt-It!</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Encrypt-It!</h1>
+      <h2>Translate any text message into a super-secret cipher!</h2>
+    </header>
+    <main>
+      <fieldset>
+        <legend>Text to Encrypt</legend>
+        <textarea id="input-text" rows="10" cols="60" 
+         placeholder="Enter your message to encrypted here"></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Encrypt Options</legend>
+
+        <p>
+          <strong>Cipher Type: </strong>
+          <select id="cipher-type">
+            <option value="shift">Shift Cipher</option>
+            <option value="random">Randomized</option>
+          </select>
+        </p>
+
+        <p>
+          <strong>Shift Amount: </strong>
+          <input type="number" id="shift-amount" value="0" />
+        </p>
+
+        <p>
+          <strong>Font Size: </strong>
+          <label for="12pt">
+            <input checked type="radio" name="text-size" id="12pt" value="12pt">12pt
+          </label>
+          <label for="24pt">
+            <input type="radio" name="text-size" id="24pt" value="24pt">24pt
+          </label>
+        </p>
+        
+        <p>
+
+          <label for="all-caps">All Caps</label>
+          <input type="checkbox" id="all-caps" name="all-caps" value="true">
+          
+        </p>
+             
+
+        <button id="encrypt-it">Encrypt It!</button>
+        <button id="reset">Reset</button>
+      </fieldset>
+
+      <div id="resultArea">
+        <h2>Result:</h2>
+        <p id="result"></p>
+      </div>
+      
+    </main>
+
+    <script src="encryptIt.js"></script>
+  </body>
+</html>
